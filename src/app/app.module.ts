@@ -10,12 +10,18 @@ import { HomeComponent } from './components/home/home.component';
 
 import {APP_ROUTING} from './app.routes';
 
+import {SpotifyService} from './services/spotify.service';
+import { NofotoPipe } from './pipes/nofoto.pipe';
+import { ArtistaComponent } from './components/artista/artista.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    NofotoPipe,
+    ArtistaComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,7 @@ import {APP_ROUTING} from './app.routes';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 30px;">
+
+  <div class="row">
+    <div class="col-md-3">
+      <img [src]="artista.images | nofoto" alt="" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col-md-9">
+      <h4>{{artista.name}}</h4>
+      <hr>
+      <button
+      [routerLink]="['/search']"
+      type="button" name="button" class="btn btn-outline-primary">Back</button>
+      <button type="button" name="button" class="btn btn-outline-success">Open on Spotify</button>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 40px;">
+    <h4>Top Songs</h4>
+    <hr>
+    <table class="table table-bordered table-inverse">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Song</th>
+          <th>Play</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let song of pistas; let i = index;">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{ song.name }}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
