@@ -13,6 +13,8 @@ import {APP_ROUTING} from './app.routes';
 import {SpotifyService} from './services/spotify.service';
 import { NofotoPipe } from './pipes/nofoto.pipe';
 import { ArtistaComponent } from './components/artista/artista.component';
+import {DomseguroPipe} from './pipes/domseguro.pipe';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { ArtistaComponent } from './components/artista/artista.component';
     SearchComponent,
     HomeComponent,
     NofotoPipe,
+    DomseguroPipe,
     ArtistaComponent
   ],
   imports: [

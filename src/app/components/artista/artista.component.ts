@@ -9,7 +9,7 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class ArtistaComponent implements OnInit {
 
-  artista:any = { images: undefined };
+  artista:any;
   pistas:any[];
 
   constructor( private activatedRoute: ActivatedRoute, private spotifyService: SpotifyService) { }
